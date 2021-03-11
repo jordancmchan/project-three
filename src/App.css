@@ -1,38 +1,65 @@
-.App {
+h1 {
   text-align: center;
+  
+}
+.optionContainer{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.seriesInfoContainer{
+  margin-top: 50px;
+  display: flex; 
+  justify-content: space-around;
+  height: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.seriesInfoContainer img{ 
+  width: 500px;
+  height: 500px; 
+  border: black solid 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textContainer{
+  width: 50vw; 
+  border: black solid 4px; 
+  text-align: center; 
+}
+
+.creatorContainer{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+ .heroContainer{
+  margin: 0 auto;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .heroInfo{
+   text-align:center;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ .heroContainer img{
+  width: 300px;
+  height: 300px; 
+  border: black solid 4px;
+ }
+
+@media (max-width:1000px ) {
+  .seriesInfoContainer{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .seriesInfoContainer img{
+   width: 50vw;
   }
 }
