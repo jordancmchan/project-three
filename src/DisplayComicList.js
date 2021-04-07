@@ -1,6 +1,5 @@
 // DisplayCharacters.js
-import DisplayComicInfo from './DisplayComicInfo.js'
-import CharacterButton from './CharacterButton.js'
+import DisplayCreators from './DisplayCreators.js'
 import { useState } from 'react';
 
 
@@ -26,7 +25,7 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
      const handleRandom = () => {
 
           const randomCharacter = heroArray[Math.floor(Math.random() * heroArray.length)]
-
+          console.log(randomCharacter)
           setCharacter(randomCharacter)
           setChosenComicArray([])
      }
@@ -49,12 +48,33 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
                </div>
 
                <div className = "seriesContainer">
-                    <CharacterButton
-                    chosenHeroes = {character}/>
+                    {character.thumbnail === undefined 
+                    ?null 
+                    :
+                    <>
+                         <div className = "heroContainer">
+                              <img src = {character.thumbnail.path + '.jpg'} alt=""/>
+                              <div className = "heroInfo">
+                                   <h3>{character.name}</h3>
+                                   <p>{character.description}</p>
+                              </div>
+                         </div>
+                    </>
+                    }
 
-                    <DisplayComicInfo 
-                    chosenComicArray = {chosenComicArray}
-                    />                    
+               {chosenComicArray.map((comic , index) => {
+                    return(
+                         <div className = "seriesInfoContainer ">
+                              <img src= {comic.thumbnail.path + '.jpg'} key = {index} alt={comic.title}/>
+                              <div className = "textContainer">
+                                   <h2 key ={index}>{comic.title}</h2>
+                                   <p key ={index}>{comic.description}</p>
+                                   <DisplayCreators
+                                   creatorsArray = {chosenComicArray} />
+                              </div>
+                         </div>
+                    )
+               })}
                </div>
           </div>
      )  
