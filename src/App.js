@@ -63,7 +63,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Marvel API Project Three</h1>
+      <h1>Marvel API Project Three Work In Progress April 7 2021
+      </h1>
+      <img src="" alt=""/>
       <DisplayComicList 
       comicsArray = {comicsArray}
       heroArray = {chosenCharacter}
