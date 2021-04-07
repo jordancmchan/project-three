@@ -1,8 +1,11 @@
+*{
+  background-color: #EC1D24;
+}
 h1, h2 {
   text-align: center;
   
 }
-.optionContainer{
+.navContainer{
   display:flex;
   justify-content: center;
   margin-bottom: 50px;
