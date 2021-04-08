@@ -1,0 +1,70 @@
+* {
+  background-color: #ec1d24;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.seriesInfoContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
+}
+
+.seriesInfoContainer img {
+  width: 500px;
+  height: 500px;
+  border: black solid 4px;
+}
+
+.textContainer {
+  width: 50vw;
+  border: black solid 4px;
+  text-align: center;
+}
+
+.creatorContainer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.heroContainer {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroInfo {
+  text-align: center;
+}
+
+.heroContainer img {
+  width: 300px;
+  height: 300px;
+  border: black solid 4px;
+}
+
+
+
+@media (max-width: 1000px) {
+  .seriesInfoContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .seriesInfoContainer img {
+    width: 50vw;
+  }
+}

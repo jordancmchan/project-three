@@ -1,11 +1,11 @@
 //SearchResult.js
+import NoResultsPage from './NoResultsPage.js'
 import { useState , useEffect} from 'react';
 import axios from 'axios';
 
 const SearchResult = ({userInput}) => {
      const [searchResults , setSearchResults] = useState([])
-
-     
+     const [noResults , setNoResults] = useState(false)
      const publicApiKey = "7dcc9e9b44bc9c6511df39ec67f8c47a";
      const baseUrl = "https://gateway.marvel.com";
 
@@ -23,32 +23,39 @@ const SearchResult = ({userInput}) => {
                })
                .then((searchResponse)=>{
                     const resultsArr = searchResponse.data.data.results
-                    console.log(resultsArr)
                     
                     const filteredArr = resultsArr.filter((results)=>{
                          return(
-                              !results.thumbnail.path.includes('image_not_available') 
+                              results.description === '' &&
+                              !results.thumbnail.path.includes('image_not_available')                    
                          )
                     })
+
+                    if (filteredArr.length !== 0){
+                         setSearchResults(filteredArr)
+                         setNoResults(false)
+                    }else{
+                         setNoResults(true)
+                    }
                     
-                    setSearchResults(filteredArr)
-                    })
+               })
      },[userInput])
 
      return(
           <div className="overallResultsContainer">
-               <h1>Results</h1>
-               {searchResults.map((result , index) => {
+             {noResults === false
+               ?searchResults.map((result) => {
                     return(
                          <div className="resultContainer">
-                              <p>{result.name}</p>
+                              <a href={result.urls[0].url}>
                               <img src={result.thumbnail.path + '.jpg'} alt= {result.name}/>
-                              <p>{result.description}</p>
+                              </a>
+                              <h3>{result.name}</h3>
                          </div>
                     )
                })
-
-               }
+               :<NoResultsPage />
+             }  
           </div>
      )
 }

@@ -1,0 +1,126 @@
+* {
+  background-color: #ec1d24;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.navContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.seriesInfoContainer {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 500px;
+}
+
+.seriesInfoContainer img {
+  width: 500px;
+  height: 500px;
+  border: black solid 4px;
+}
+
+.textContainer {
+  width: 50vw;
+  border: black solid 4px;
+  text-align: center;
+}
+
+.creatorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+.heroContainer {
+  margin: 0 auto;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heroInfo {
+  text-align: center;
+}
+
+.heroContainer img {
+  width: 300px;
+  height: 300px;
+  border: black solid 4px;
+}
+
+@media (max-width: 1000px) {
+  .seriesInfoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .seriesInfoContainer img {
+    width: 50vw;
+  }
+}
+
+.overallResultsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.overallResultsContainer .resultContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overallResultsContainer .resultContainer img {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.overallResultsContainer .resultContainer h3 {
+  text-align: center;
+  width: 200px;
+}

@@ -94,6 +94,7 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
                     </div>
                </>
                }
+               
                {searchInput === ''
                ?null 
                :

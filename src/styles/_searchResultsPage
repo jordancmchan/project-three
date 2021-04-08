@@ -1,0 +1,21 @@
+.overallResultsContainer{
+     width: 80%;
+     margin: 0 auto;
+     display:flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+     .resultContainer {
+          display:flex;
+          flex-direction:column;
+          img{
+               width: 200px;
+               height: auto;
+               margin: 0 auto;
+               border: 2px solid black;
+          }
+          h3{
+               text-align: center;
+               width: 200px;
+          }
+        }
+}
