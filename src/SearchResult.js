@@ -38,7 +38,7 @@ const SearchResult = ({userInput}) => {
      return(
           <div className="overallResultsContainer">
                <h1>Results</h1>
-               {searchResults.map((result) => {
+               {searchResults.map((result , index) => {
                     return(
                          <div className="resultContainer">
                               <p>{result.name}</p>

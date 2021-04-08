@@ -1,68 +1,80 @@
-*{
-  background-color: #EC1D24;
-}
-h1, h2 {
-  text-align: center;
-  
-}
-.navContainer{
-  display:flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  
+* {
+  background-color: #ec1d24;
 }
 
-.seriesInfoContainer{
+h1,
+h2 {
+  text-align: center;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.seriesInfoContainer {
   margin-top: 50px;
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   height: 500px;
 }
 
-.seriesInfoContainer img{ 
+.seriesInfoContainer img {
   width: 500px;
-  height: 500px; 
+  height: 500px;
   border: black solid 4px;
 }
 
-.textContainer{
-  width: 50vw; 
-  border: black solid 4px; 
-  text-align: center; 
+.textContainer {
+  width: 50vw;
+  border: black solid 4px;
+  text-align: center;
 }
 
-.creatorContainer{
+.creatorContainer {
   display: flex;
   justify-content: center;
   height: 50px;
 }
 
- .heroContainer{
+.heroContainer {
   margin: 0 auto;
   width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
- }
+}
 
- .heroInfo{
-   text-align:center;
- }
+.heroInfo {
+  text-align: center;
+}
 
- .heroContainer img{
+.heroContainer img {
   width: 300px;
-  height: 300px; 
+  height: 300px;
   border: black solid 4px;
- }
+}
 
-@media (max-width:1000px ) {
-  .seriesInfoContainer{
+.resultContainer {
+  height: 30vh;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  .seriesInfoContainer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
 
-  .seriesInfoContainer img{
-   width: 50vw;
+  .seriesInfoContainer img {
+    width: 50vw;
   }
 }
