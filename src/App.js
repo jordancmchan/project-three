@@ -3,12 +3,14 @@ import axios from 'axios';
 import { useState , useEffect} from 'react';
 import Navigation from './Navigation.js';
 import Title from './Title.js';
+import Loading from './Loading.js';
 import Footer from './Footer';
 
 
 function App() {
   const [comicsArray , setComicsArray ] = useState([]);
   const [chosenCharacter , setChosenCharacter] = useState([]);
+  const [isLoading , setIsLoading] = useState(true);
 
   
   const publicApiKey = "7dcc9e9b44bc9c6511df39ec67f8c47a";
@@ -28,7 +30,7 @@ function App() {
         .then((comicResponse)=>{
           const comicApiResults = comicResponse.data.data.results; 
           setComicsArray(comicApiResults)
-          
+          setIsLoading(false)
         })
    
   }, []);
@@ -64,11 +66,15 @@ function App() {
   return (
     <div className="App">
       <div className="body">
-        <Title />
-        <Navigation 
-        comicsArray = {comicsArray}
-        heroArray = {chosenCharacter}
-        />
+      <Title />
+        {
+          isLoading
+          ? <Loading />
+          :<Navigation 
+          comicsArray = {comicsArray}
+          heroArray = {chosenCharacter}
+          />
+        }
       </div>
       <Footer />
     </div>

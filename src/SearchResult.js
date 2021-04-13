@@ -1,11 +1,14 @@
 //SearchResult.js
 import NoResultsPage from './NoResultsPage.js'
+import Loading from './Loading.js'
 import { useState , useEffect} from 'react';
 import axios from 'axios';
 
 const SearchResult = ({userInput}) => {
-     const [searchResults , setSearchResults] = useState([])
-     const [noResults , setNoResults] = useState(false)
+     const [searchResults , setSearchResults] = useState([]);
+     const [noResults , setNoResults] = useState(false);
+     const [isLoading , setIsLoading] = useState(true);
+
      const publicApiKey = "7dcc9e9b44bc9c6511df39ec67f8c47a";
      const baseUrl = "https://gateway.marvel.com";
 
@@ -33,9 +36,11 @@ const SearchResult = ({userInput}) => {
 
                     if (filteredArr.length !== 0){
                          setSearchResults(filteredArr)
+                         setIsLoading(false)
                          setNoResults(false)
                     }else{
                          setNoResults(true)
+
                     }
                     
                })
@@ -43,6 +48,10 @@ const SearchResult = ({userInput}) => {
 
      return(
           <div className="overallResultsContainer">
+               {isLoading
+               ?<Loading />
+               :null
+               }
              {noResults === false
                ?searchResults.map((result) => {
                     return(
