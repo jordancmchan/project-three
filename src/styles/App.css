@@ -44,8 +44,7 @@ h2 {
 }
 
 .resultsContainer {
-  background-color: red;
-  height: auto;
+  background-color: #ed1d24;
 }
 
 .resultsContainer .seriesInfoContainer {
@@ -57,7 +56,7 @@ h2 {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 10px 0 7.5%;
+  padding-top: 10px;
 }
 
 .resultsContainer .seriesInfoContainer img {
@@ -105,7 +104,7 @@ h2 {
 }
 
 .heroContainer {
-  padding: 10px 0 14% 0;
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,8 +136,7 @@ h2 {
 }
 
 footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
@@ -192,6 +190,7 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
   border: black 1px solid;
+  margin-bottom: 10px;
 }
 
 .overallResultsContainer .resultContainer img {
@@ -199,6 +198,13 @@ footer p {
   height: auto;
   margin: 0 auto;
   border: 2px solid white;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.overallResultsContainer .resultContainer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .overallResultsContainer .resultContainer h3 {

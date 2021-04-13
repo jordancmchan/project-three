@@ -19,7 +19,6 @@ function App() {
         method: 'GET',
         url : `${baseUrl}:443/v1/public/events`,
         params: {
-          // offset: 190,
           limit: 100,
           apikey: publicApiKey,
           ts: 1,

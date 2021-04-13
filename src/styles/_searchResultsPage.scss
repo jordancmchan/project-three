@@ -9,11 +9,17 @@
           display:flex;
           flex-direction:column;
           border: black 1px solid;
+          margin-bottom: 10px;
+
           img{
                width: 200px;
                height: auto;
                margin: 0 auto;
                border: 2px solid white;
+               transition-duration: 1s;
+               &:hover{
+                    transform:scale(1.1);
+                  }              
           }
           h3{
                text-align: center;

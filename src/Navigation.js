@@ -23,6 +23,9 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
           setChosenComicArray(filteredArray)
           setCharacter([])
           setSearchInput('')
+
+          document.querySelector('footer').style.position = 'absolute';
+
      }
 
      const handleRandom = () => {
@@ -31,6 +34,9 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
           setCharacter(randomCharacter)
           setChosenComicArray([])
           setSearchInput('')
+
+          document.querySelector('footer').style.position = 'absolute';
+
      }
 
      const handleSearch = (e) => {
@@ -41,6 +47,8 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
           setCharacter([])
           setChosenComicArray([])
           document.querySelector('#searchInput').value = '';     
+
+          document.querySelector('footer').style.position = 'static';
      }
 
 
