@@ -26,7 +26,6 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
      }
 
      const handleRandom = () => {
-
           const randomCharacter = heroArray[Math.floor(Math.random() * heroArray.length)]
           console.log(randomCharacter)
           setCharacter(randomCharacter)
@@ -37,6 +36,7 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
      const handleSearch = (e) => {
           e.preventDefault();
           const userInput = document.querySelector('#searchInput').value
+
           setSearchInput(userInput);
           setCharacter([])
           setChosenComicArray([])
@@ -47,7 +47,6 @@ const DisplayComicList = ({comicsArray, heroArray}) => {
      return(
           <div> 
                <div className="navContainer">
-
                     <select value = {chosenComicArray.title} onClick = {handleChange}>
                          {comicsArray.map((comic)=>{
                               return(

@@ -1,8 +1,9 @@
-import "./App.scss";
+import "./styles/App.scss";
 import axios from 'axios';
 import { useState , useEffect} from 'react';
-import DisplayComicList from './DisplayComicList.js';
-
+import Navigation from './Navigation.js';
+import Title from './Title.js';
+import Footer from './Footer';
 
 
 function App() {
@@ -63,15 +64,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">
-        <h1>Marvel API Project Three</h1>
-        <img src="" alt=""/>
-        <DisplayComicList 
+      <div className="body">
+        <Title />
+        <Navigation 
         comicsArray = {comicsArray}
         heroArray = {chosenCharacter}
-
         />
       </div>
+      <Footer />
     </div>
   );
 }

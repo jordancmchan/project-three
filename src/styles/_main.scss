@@ -1,58 +1,125 @@
-* {
-  background-color: #ec1d24;
+.App{
+  height: 100vh;
+  background-color: #ed1d24;
+}
+
+.titlePage{
+  height: 25vh;
+  background-color:black;
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 5vh;
+  }
 }
 
 h1,
 h2 {
   text-align: center;
 }
+
 .navContainer {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.seriesInfoContainer {
-  margin-top: 50px;
-  display: flex;
   justify-content: space-around;
-  height: 500px;
+  padding: 5px 0;
+  
+  input[type=text]{
+    border: 2px solid #ed1d24;
+    outline: none;
+    width: 250px; 
+  }
+
+  input[type=submit]{
+    border: none;
+    text-decoration: none;
+    background-color:black;
+    color: #ed1d24;
+  }
 }
 
-.seriesInfoContainer img {
-  width: 500px;
-  height: 500px;
-  border: black solid 4px;
-}
+.resultsContainer{
+  background-color: red;
+  height: auto;
 
-.textContainer {
-  width: 50vw;
-  border: black solid 4px;
-  text-align: center;
-}
+  .seriesInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 0 7.5%;
 
-.creatorContainer {
-  display: flex;
-  justify-content: center;
-  height: 50px;
+    img{
+      max-width: 30%;
+      height: auto;
+      border: white solid 4px;
+    }
+    .textContainer {
+      height: auto;
+      border: black solid 4px;
+      text-align: center;
+      margin-left: 10px;
+      background-color: white;
+      padding: 0 10px 0 10px;
+      .creatorsContainer{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        padding-top: 10px;
+
+        h3{
+          text-align: left;
+        }
+        
+        .creatorContainer {
+          display: flex;
+          justify-content: flex-start;
+
+          .creatorRole{
+            color: red;
+          }
+          p{
+            margin: 0;
+            
+          }
+        }
+      }
+    
+    }
+  }
 }
 
 .heroContainer {
-  margin: 0 auto;
-  width: 300px;
+  padding: 10px 0 14% 0 ;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+
+  img{
+    width: 300px;
+    height: 300px;
+    border: white solid 4px;
+  }
+
+  .heroInfo {
+    text-align: left;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: center;
+  }
 }
 
-.heroInfo {
-  text-align: center;
-}
-
-.heroContainer img {
-  width: 300px;
-  height: 300px;
-  border: black solid 4px;
+footer{
+  position:sticky;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: black;
+  p{
+    margin: 0;
+    color: #ed1d24;
+    text-align:center;
+  }
 }
 
 

@@ -2,16 +2,18 @@
      width: 80%;
      margin: 0 auto;
      display:flex;
-     justify-content: space-evenly;
+     justify-content: space-between;
      flex-wrap: wrap;
+     padding-top: 10px;
      .resultContainer {
           display:flex;
           flex-direction:column;
+          border: black 1px solid;
           img{
                width: 200px;
                height: auto;
                margin: 0 auto;
-               border: 2px solid black;
+               border: 2px solid white;
           }
           h3{
                text-align: center;
